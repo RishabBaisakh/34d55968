@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin"); // Import the plugin
 
 module.exports = {
   entry: "./src/index.tsx",
@@ -50,6 +51,11 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./public/index.html", // Point to your HTML template in public
+    }),
+  ],
   devtool: "source-map",
   devServer: {
     static: {
@@ -59,5 +65,6 @@ module.exports = {
     open: true,
     hot: true,
     historyApiFallback: true,
+    contentBase: "./dist",
   },
 };
