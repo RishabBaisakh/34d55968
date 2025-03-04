@@ -9,10 +9,8 @@ const Archived = () => {
   const { activities, archivedActivities } = useSelector(
     (state: RootState) => state.activity
   );
-  console.log("🚀 ~ Archived ~ archivedActivities:", archivedActivities);
 
   useEffect(() => {
-    // TODO: Change this logic
     if (archivedActivities.length === 0 && activities.length === 0)
       navigate("/");
   }, []);
@@ -23,6 +21,11 @@ const Archived = () => {
       {archivedActivities.map((activity) => (
         <ActivityCard key={activity.id} activity={activity} />
       ))}
+      {archivedActivities.length === 0 && (
+        <div>
+          <p>You currently have no archived activity.</p>
+        </div>
+      )}
     </div>
   );
 };

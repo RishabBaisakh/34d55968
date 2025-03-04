@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/colors" as *;
 
 .activityDetails {
   display: flex;
@@ -21,6 +22,25 @@
     .MuiAvatar-root {
       height: 100px;
       width: 100px;
+    }
+  }
+
+  .activityActions {
+    display: flex;
+
+    .archived {
+      border: 1px solid lightgrey;
+      padding: $space-sm;
+      font-weight: bold;
+      margin-top: $space-md;
+      color: $font-secondary;
+    }
+
+    .action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
     }
   }
 }

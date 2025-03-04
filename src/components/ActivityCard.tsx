@@ -39,7 +39,6 @@ const ActivityCard = ({ activity }: ActivityProps) => {
       className="activityCard"
       onClick={() => {
         navigate(`/activity/${activity.id}`);
-        console.log(activity.id);
       }}
     >
       <div className="activityCardRow">
@@ -66,9 +65,9 @@ const ActivityCard = ({ activity }: ActivityProps) => {
         </div>
       </div>
       <div className="activityActions">
-        <Tooltip title="Archive activity">
-          <>
-            {!activity.is_archived && (
+        <>
+          {!activity.is_archived && (
+            <Tooltip title="Archive">
               <IconButton
                 onClick={(e) => {
                   archiveActivity();
@@ -77,8 +76,10 @@ const ActivityCard = ({ activity }: ActivityProps) => {
               >
                 <ArchiveIcon className="iconButton" />
               </IconButton>
-            )}
-            {activity.is_archived && (
+            </Tooltip>
+          )}
+          {activity.is_archived && (
+            <Tooltip title="Unrrchive">
               <IconButton
                 onClick={(e) => {
                   unarchiveActivity();
@@ -87,9 +88,9 @@ const ActivityCard = ({ activity }: ActivityProps) => {
               >
                 <UnarchiveIcon className="iconButton" />
               </IconButton>
-            )}
-          </>
-        </Tooltip>
+            </Tooltip>
+          )}
+        </>
       </div>
     </div>
   );

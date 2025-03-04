@@ -15,3 +15,7 @@ export const patchArchiveActivity = (id: string) => {
 export const patchUnarchiveActivity = (id: string) => {
   return apiClient.patch(`/activities/${id}`, { is_archived: false });
 };
+
+export const patchResetActivities = () => {
+  return apiClient.patch("/activities/reset");
+};
