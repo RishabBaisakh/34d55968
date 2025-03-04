@@ -1,0 +1,46 @@
+{
+  "name": "frontend-hiring-challenge",
+  "version": "1.0.0",
+  "main": "index.tsx",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.6",
+    "@mui/material": "^6.4.6",
+    "@reduxjs/toolkit": "^2.6.0",
+    "@svgr/webpack": "^8.1.0",
+    "axios": "^1.8.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.2.0",
+    "sass": "^1.85.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.9",
+    "@babel/plugin-transform-runtime": "^7.26.9",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.26.0",
+    "@types/react": "18",
+    "@types/react-dom": "18",
+    "@types/react-router-dom": "^5.3.3",
+    "babel-loader": "^10.0.0",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^7.1.2",
+    "file-loader": "^6.2.0",
+    "regenerator-runtime": "^0.14.1",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.2",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  }
+}

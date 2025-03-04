@@ -1,0 +1,28 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+
+.app {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+}
+
+.section {
+  background: $background-secondary;
+  padding: $space-md;
+  flex: 1;
+  min-height: 100vh;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px light gray;
+  background-color: $background-primary;
+  padding: $space-md;
+}

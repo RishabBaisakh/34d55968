@@ -1,0 +1,43 @@
+@use "../abstracts/variables" as *;
+
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  padding-top: $space-md;
+  padding-right: $space-md;
+  display: flex;
+  flex-direction: column;
+
+  .logo {
+    margin: $space-md;
+  }
+
+  .navLinks {
+    display: flex;
+    flex-direction: column;
+    margin-top: $space-lg;
+
+    a {
+      font-size: $font-size-lg;
+      padding-left: $space-md;
+      padding-top: $space-sm;
+      padding-bottom: $space-sm;
+      border-top-right-radius: 100px;
+      border-bottom-right-radius: 100px;
+
+      &:hover {
+        background: rgba(211, 211, 211, 0.427);
+      }
+    }
+
+    .active {
+      background: rgb(29, 138, 247);
+      color: white;
+      pointer-events: none;
+
+      &:hover {
+        background: rgb(29, 138, 247);
+      }
+    }
+  }
+}

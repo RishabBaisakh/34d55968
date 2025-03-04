@@ -1,0 +1,49 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/variables" as *;
+
+.activityCard {
+  background: $background-primary;
+  border-radius: 10px;
+  padding-left: $space-sm;
+  padding-right: $space-sm;
+  padding-top: $space-md;
+  padding-bottom: $space-md;
+  margin-top: $space-sm;
+  margin-bottom: $space-md;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  background-color: $background-secondary;
+  border: 2px solid lightgrey;
+  cursor: pointer;
+  transition: background 2 ease-in;
+
+  &:hover {
+    background: white;
+  }
+
+  .call_type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .MuiSvgIcon-root {
+      margin-right: $space-lg;
+      margin-left: $space-md;
+    }
+  }
+
+  .activityCardRow {
+    display: flex;
+  }
+
+  .activityCardColumn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  span {
+    color: $font-secondary;
+    font-size: $font-size-sm;
+  }
+}

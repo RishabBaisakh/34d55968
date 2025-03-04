@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as *;
+
+.activityDetails {
+  display: flex;
+  flex-direction: column;
+
+  .activityDetailsRow {
+    border-bottom: 1px solid lightgrey;
+    width: 100%;
+    padding: $space-md;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $space-xl;
+
+    .MuiAvatar-root {
+      height: 100px;
+      width: 100px;
+    }
+  }
+}

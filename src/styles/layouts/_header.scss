@@ -1,0 +1,8 @@
+@use "../abstracts/variables" as *;
+
+.header {
+  .logo {
+    width: 150px;
+    margin: $space-sm;
+  }
+}
